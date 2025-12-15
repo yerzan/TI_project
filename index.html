@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/sections.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <div class="nav-left">
+                <a href="#home" class="nav-logo">Travel</a>
+
+                <nav class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#tours">Tours</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <button class="btn nav-cta" id="bookNowBtn">Book Now</button>
+
+
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- ================= HOME SECTION ================= -->
+        <section class="home" id="home">
+            <div class="home-overlay"></div>
+
+            <div class="container home-content">
+
+                <h1 class="home-title">TRAVEL</h1>
+                <p class="home-subtitle">PLAN YOUR EXPERIENCE</p>
+
+                <div class="home-cards">
+
+                    <div class="home-card home-nz">
+                        <div class="home-card-overlay"></div>
+                        <h3>New Zealand</h3>
+                        <p>Plan a trip now</p>
+                    </div>
+
+                    <div class="home-card home-id">
+                        <div class="home-card-overlay"></div>
+                        <h3>Indonesia</h3>
+                        <p>Plan a trip now</p>
+                    </div>
+
+                    <div class="home-card home-ar">
+                        <div class="home-card-overlay"></div>
+                        <h3>Argentina</h3>
+                        <p>Plan a trip now</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+<!-- ================= ABOUT SECTION ================= -->
+        <section class="about" id="about">
+            <h2 class="section-title">ABOUT US</h2>
+
+            <div class="container about-inner">
+
+                <!-- IMAGE -->
+                <div class="about-image">
+                    <img src="assets/img/about/about.jpg" alt="About Image">
+                </div>
+
+                <!-- CONTENT -->
+                <div class="about-card glass">
+                    <h3>Get to know us</h3>
+
+                    <!-- SHORT TEXT -->
+                    <p class="about-text short">
+                        We are a team of passionate travelers who believe that every journey should be more than just a destination.  
+                        Our mission is to create unforgettable travel experiences that combine comfort, adventure and authenticity.
+                    </p>
+
+                    <!-- FULL TEXT (HIDDEN) -->
+                    <p class="about-text full" style="display: none;">
+                        We are a team of passionate travelers who believe that every journey should be more than just a destination.  
+                        Our mission is to create unforgettable travel experiences that combine comfort, adventure and authenticity.  
+
+                        We carefully design each tour, focusing on unique locations, local culture and handpicked activities that truly define the place.  
+                        Our experienced guides know the destinations inside out and are always ready to share their knowledge and passion.  
+
+                        Whether you are looking for breathtaking landscapes, cultural discoveries or relaxing escapes, we tailor our trips to your needs.  
+                        We cooperate only with trusted partners to ensure safety, quality and seamless organization at every step.  
+
+                        Over the years, we have helped thousands of travelers explore the world with confidence and excitement.  
+                        Join us and discover how travel can become an inspiring, life-changing experience.
+                    </p>
+
+                    <!-- BUTTON -->
+                    <button class="btn about-btn" id="aboutToggleBtn">
+                        Read More
+                    </button>
+
+                    <!-- STATS -->
+                    <div class="about-stats">
+                        <div><span>500</span><p>Tours</p></div>
+                        <div><span>10</span><p>Years</p></div>
+                        <div><span>1500</span><p>Locations</p></div>
+                        <div><span>550</span><p>Reviews</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= WHY US SECTION ================= -->
+        <section class="why-us" id="why-us">
+            <h2 class="section-title">WHY CHOOSE US</h2>
+
+            <div class="container why-inner">
+
+                <div class="why-card glass">
+                    <img src="assets/img/icons/star.png" alt="Professional Guides">
+                    <h3>Professional Guides</h3>
+                    <p>Experienced local experts make every trip safe and unforgettable.</p>
+                </div>
+
+                <div class="why-card glass">
+                    <img src="assets/img/icons/nature.png" alt="Beautiful Places">
+                    <h3>Beautiful Places</h3>
+                    <p>We pick only the most breathtaking destinations around the world.</p>
+                </div>
+
+                <div class="why-card glass">
+                    <img src="assets/img/icons/price.png" alt="Affordable Prices">
+                    <h3>Affordable Prices</h3>
+                    <p>Best balance between cost, comfort, and adventure.</p>
+                </div>
+
+                <div class="why-card glass">
+                    <img src="assets/img/icons/security.png" alt="Secure Travel">
+                    <h3>Secure Travel</h3>
+                    <p>Trusted partners and safe, verified routes.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= POPULAR TOURS (SLIDER)  ================= -->
+        <section class="tours" id="tours">
+            <h2 class="section-title">POPULAR TOURS</h2>
+
+            <div class="tours-wrapper">
+
+                <button class="tour-arrow left">‹</button>
+
+                <div class="tours-scroll">
+
+                    <div class="tour-card" data-tour="new-zealand">
+                        <img src="assets/img/tours/new-zealand-tour.jpg" alt="New Zealand Tour">
+                        <h3>New Zealand</h3>
+                        <p>Experience breathtaking landscapes and crystal lakes.</p>
+                        <button class="btn tour-more">More</button>
+                    </div>
+
+                    <div class="tour-card" data-tour="indonesia">
+                        <img src="assets/img/tours/indonesia-tour.jpg" alt="Indonesia Tour">
+                        <h3>Indonesia</h3>
+                        <p>Tropical islands, azure waters and unforgettable views.</p>
+                        <button class="btn tour-more">More</button>
+                    </div>
+
+                    <div class="tour-card" data-tour="argentina">
+                        <img src="assets/img/tours/argentina-tour.jpg" alt="Argentina Tour">
+                        <h3>Argentina</h3>
+                        <p>Explore dramatic mountains and stunning national parks.</p>
+                        <button class="btn tour-more">More</button>
+                    </div>
+
+                    <div class="tour-card" data-tour="japan">
+                        <img src="assets/img/tours/japan-tour.jpg" alt="Japan Tour">
+                        <h3>Japan</h3>
+                        <p>Unique culture, temples, and modern cityscapes.</p>
+                        <button class="btn tour-more">More</button>
+                    </div>
+
+                    <div class="tour-card" data-tour="norway">
+                        <img src="assets/img/tours/norway-tour.jpg" alt="Norway Tour">
+                        <h3>Norway</h3>
+                        <p>Fjords, northern lights, and breathtaking nature.</p>
+                        <button class="btn tour-more">More</button>
+                    </div>
+
+                    <div class="tour-card" data-tour="poland">
+                        <img src="assets/img/tours/poland-tour.jpg" alt="Poland Tour">
+                        <h3>Poland</h3>
+                        <p>Historic cities, mountain trails and charming landscapes.</p>
+                        <button class="btn tour-more">More</button>
+                    </div>
+
+                </div>
+
+                <button class="tour-arrow right">›</button>
+
+            </div>
+        </section>
+
+
+        <!-- ================= TOUR MODAL ================= -->
+        <div class="tour-modal" id="tourModal">
+            <div class="tour-modal-content glass">
+
+                <button class="tour-modal-close">&times;</button>
+
+                <div class="tour-modal-inner">
+
+                    <!-- LEFT IMAGE -->
+                    <div class="tour-modal-image">
+                        <img id="modalImage" src="" alt="Tour image">
+                    </div>
+
+                    <!-- RIGHT CONTENT -->
+                    <div class="tour-modal-text">
+                        <h3 id="modalTitle"></h3>
+                        <p id="modalDescription"></p>
+
+                        <button class="btn modal-book" id="modalBookBtn">
+                            Book Now
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    <!-- ================= CONTACT SECTION ================= -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">CONTACT US</h2>
+
+            <div class="container contact-inner">
+
+                <!-- LEFT INFO -->
+                <div class="contact-info glass">
+                    <h3>Get in touch</h3>
+                    <p>
+                        Have questions or want to plan your next adventure?  
+                        Send us a message or contact us directly.
+                    </p>
+
+                    <div class="contact-links">
+                        <a href="https://t.me/yerzanrly" target="_blank">
+                            📩 Telegram
+                        </a>
+
+                        <a href="mailto:mkleban32@gmail.com">
+                            ✉️ Email
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT FORM -->
+                <form class="contact-form glass" id="contactForm">
+                    <input type="text" id="name" placeholder="Your name" required>
+                    <input type="email" id="email" placeholder="Your email" required>
+                    <textarea id="message" placeholder="Your message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+
+                <!-- Thank you message -->
+                <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+                    <p>Thank you for your message! We'll get back to you soon.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+        
+ <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-inner">
+
+                <!-- LEFT -->
+            <div class="footer-brand">
+                <h3>Travel</h3>
+                <p>
+                    Discover the most beautiful places around the world.  
+                    Plan your next adventure with us.
+                </p>
+            </div>
+
+                <!-- CENTER -->
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#tours">Tours</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+
+                <a href="mailto:mkleban32@gmail.com">
+                    ✉️ mkleban32@gmail.com
+                </a>
+
+                <a href="https://t.me/yerzanrly" target="_blank">
+                    📩 Telegram
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Mykhailo Kleban | Travel Website — Project for Internet Technologies
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script type="module" src="assets/js/main.js"></script>
+
+
+</body>
+</html>
