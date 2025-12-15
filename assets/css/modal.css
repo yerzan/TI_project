@@ -1,5 +1,5 @@
 /* ===========================
-   TOUR MODAL (fix)
+   TOUR MODAL (FIXED)
    =========================== */
 
 .tour-modal {
@@ -20,6 +20,10 @@
     opacity: 1;
     pointer-events: auto;
 }
+
+/* ===========================
+   MODAL CONTENT
+   =========================== */
 
 .tour-modal-content {
     max-width: 900px;
@@ -43,6 +47,10 @@
     opacity: 1;
 }
 
+/* ===========================
+   CLOSE BUTTON
+   =========================== */
+
 .tour-modal-close {
     position: absolute;
     top: 18px;
@@ -52,18 +60,7 @@
     border: none;
     color: #fff;
     cursor: pointer;
-}
-
-
-@keyframes modalFadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.97);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+    z-index: 10;
 }
 
 .tour-modal-close:hover {
@@ -71,8 +68,10 @@
     opacity: 0.8;
 }
 
+/* ===========================
+   GRID LAYOUT
+   =========================== */
 
-/* GRID */
 .tour-modal-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,7 +86,10 @@
     border-radius: 16px;
 }
 
-/* TEXT */
+/* ===========================
+   TEXT
+   =========================== */
+
 .tour-modal-text h3 {
     font-size: 32px;
     margin-bottom: 15px;
@@ -97,36 +99,11 @@
     color: var(--muted);
     line-height: 1.7;
     font-size: 16px;
-}
-
-@media (max-width: 768px) {
-    .tour-modal-inner {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===========================
-   MODAL BOOK BUTTON
-   =========================== */
-
-.modal-book {
-    margin-top: 30px;
-    padding: 12px 28px;
-    font-size: 15px;
-    align-self: flex-start;
-}
-
-.modal-book:hover {
-    transform: translateY(-2px);
-}
-
-.tour-modal-text p {
     margin-bottom: 14px;
-    line-height: 1.7;
 }
 
 /* ===========================
-   MODAL BOOK NOW BUTTON
+   BOOK BUTTON
    =========================== */
 
 .modal-book {
@@ -141,22 +118,24 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    align-self: flex-start;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     animation: pulseGlow 2.5s infinite;
 }
 
-/* Hover */
 .modal-book:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 0 18px rgba(52,195,227,0.6);
 }
 
-/* Click */
 .modal-book:active {
     transform: scale(0.96);
 }
 
-/* Pulse animation */
+/* ===========================
+   ANIMATION
+   =========================== */
+
 @keyframes pulseGlow {
     0% {
         box-shadow: 0 0 0 rgba(52,195,227,0.0);
@@ -166,5 +145,50 @@
     }
     100% {
         box-shadow: 0 0 0 rgba(52,195,227,0.0);
+    }
+}
+
+/* ====================
+   MOBILE FIX
+   ====================*/
+
+@media (max-width: 768px) {
+
+    .tour-modal {
+        align-items: flex-start;
+    }
+
+    .tour-modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+        margin: 20px 0;
+        padding: 26px;
+    }
+
+    .tour-modal-inner {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .tour-modal-image img {
+        max-height: 260px;
+    }
+
+    .tour-modal-text h3 {
+        font-size: 24px;
+    }
+
+    .modal-book {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tour-modal-content::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .tour-modal-content::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.25);
+        border-radius: 10px;
     }
 }
